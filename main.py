@@ -162,5 +162,10 @@ if __name__ == "__main__":
     time.sleep(1)
     print(f"{Fore.RED}{title}{Fore.RESET}")
     print(f"The TOOL manual was created in {Fore.CYAN}{os.getcwd()}{Fore.RESET}")
+    with open("manual.txt", "w") as file:
+        print(manual)
+        file.write("manual: - 1-'install' this option is the default option of the tool which will simply generate the offline installer for you, follow the instructions after typing\nSorry, the instructions are in Portuguese, but they are easy to understand\n2- 'stringinstall'\nThis option allows you to install a program with binaries in a string or file if the binary is written inside it as if it were text, understand?")
+
     choice = str(input("\n\n\n[TOOL]# "))
     verification(choice) 
+
